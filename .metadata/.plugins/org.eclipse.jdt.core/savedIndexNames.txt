@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+C:\Users\user1\spring-react\.metadata\.plugins\org.eclipse.jdt.core
+2769537993.index
+1134054405.index
+4142967540.index
+1865797976.index
+491826774.index
+2422199252.index

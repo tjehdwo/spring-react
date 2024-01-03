@@ -1,0 +1,6 @@
+#클라이언트 id
+#272756589106-lbbiu0ojtcrn1sl7unvdd9loagv71fh6.apps.googleusercontent.com
+#클라이언트 비밀번호
+#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
+
+spring.security.oauth2.client.registration.

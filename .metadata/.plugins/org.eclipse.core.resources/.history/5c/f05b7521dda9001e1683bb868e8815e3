@@ -1,0 +1,24 @@
+package com.kh.springchap2.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.kh.springchap2.model.Product;
+import com.kh.springchap2.service.ProductService;
+
+//@Controller // html
+@RestController
+@RequestMapping
+@CrossOrigin(origins="http://localhost:3000",allowCredentials="true",allowHeaders="*")
+public class ProductController {
+	@Autowired
+	private ProductService productService;
+	
+	@GetMapping("/item")
+	public ResponseEntity<List<Product>> getAllProduct(){
+		List<Product> products = productService.getAllProduct();
+		return ResponseEntity.ok(products);
+	}
+}
