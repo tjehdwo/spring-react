@@ -8,7 +8,7 @@
 		<version>3.2.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.kh.springchap2</groupId>
+	<groupId>com.kh.springchap3googleAPI</groupId>
 	<artifactId>springChap3-googleAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springChap3-googleAPI</name>
