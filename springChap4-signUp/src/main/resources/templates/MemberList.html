@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Member List Page</title>
+	</head>
+	<body>
+		<table border="1">
+		<thead>
+			<tr>
+				<th>Member ID</th>
+				<th>UserName</th>
+				<th>FullName</th>
+				<th>Email</th>
+				<th>RegistrationDate</th>
+				<th>Update</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="members : ${members}">
+				<td th:text="${members.memberID}"> </td>
+				<td th:text="${members.username}"> </td>
+				<td th:text="${members.fullname}"> </td>
+				<td th:text="${members.email}"> </td>
+				<td th:text="${members.RegistrationDate}"> </td>
+				<td><a th:href="@{/members/update/{id}(id = ${members.memberID})}">수정하기</a></td>
+				<td><a th:href="@{/members/delete/{id}(id = ${members.memberID})}">삭제하기</a></td>
+			</tr>
+		</tbody>
+		</table>
+		<div>
+			<a th:href="@{/}">Back Main</a>
+		</div>
+	</body>
+</html>

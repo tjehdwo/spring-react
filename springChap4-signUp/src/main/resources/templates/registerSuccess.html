@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<script th:if="${registerSuccess}">
+			alert("로그인이 완료되었습니다.")
+		</script>
+		<a th:href="@{/}">HomePage</a>
+	</body>
+</html>

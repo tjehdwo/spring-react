@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		
+<mapper namespace="com.kh.mapper.MembersMapper">
+	<!-- 회원 등록 -->
+	<insert id="insertMember" parameterType="com.kh.model.Member">
+		INSERT INTO Members (MemberID, Username, Password, fullName, Email, RegistrationDate)
+		VALUES(MemberID.NEXTVAL, #{username}, #{password}, #{fullname}, #{email}, sysdate)
+	</insert>
+	
+	<!-- 모든 멤버 리스트  -->
+	<select id="selectAllMember" resultType="com.kh.model.Member">
+		select * from Members
+	</select>
+	
+	<!-- 특정 멤버 찾기 -->
+	<select id="getMemberById" parameterType="Long" resultType="com.kh.model.Member">
+		SELECT * FROM MEMBERS WHERE MEMBERID = #{memberID}
+	</select>
+	
+	<update id="updateMember" parameterType="com.kh.model.Member">
+		UPDATE MEMBERS
+		SET USERNAME = #{username} , FULLNAME = #{fullname},
+		Email = #{email}, RegistrationDate = sysdate
+		WHERE MEMBERID = #{memberID}
+	</update>
+	
+	<delete id="deleteMember" parameterType="Long">
+		DELETE FROM MEMBERS WHERE MEMBERID = #{memberID}	
+	</delete>
+	
+	<!-- <select id="getMemberId" parameterType="int" resultType="com.kh.model.Member">
+		select * from Members WHERE MEMBERID = ${}
+	</select> -->
+</mapper>
